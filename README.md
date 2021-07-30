@@ -6,3 +6,7 @@
 
 参考文献
 - https://gakuzzzz.github.io/slides/scala_from_other_languages/index.html#1
+
+## サブタイプ
+
+[サブタイプ](https://github.com/tatatakky/scala-examples/tree/main/examples/src/main/scala/examples/subtype/SubTypeExample.scala)
