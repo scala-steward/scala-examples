@@ -1,0 +1,29 @@
+name: Scala CI
+
+on:
+  push:
+  pull_request:
+  schedule:
+    - cron: '0 7 * * *'
+
+jobs:
+  test:
+    strategy:
+      matrix:
+        java: [8, 11]
+        os: [ ubuntu-latest ]
+    name: ${{ matrix.os }} / Java${{ matrix.java }}
+    runs-on: ${{ matrix.os }}
+    
+    steps:
+      - name: Checkout current branch
+        uses: actions/checkout@v2
+        with:
+          fetch-depth: 0
+      - name: Setup Java and Scala
+        uses: olafurpg/setup-scala@v12
+        with:
+          java-version: adopt@1.${{ matrix.java }}
+      - uses: coursier/cache-action@v6
+      - name: Run tests
+        run: sbt test
