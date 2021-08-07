@@ -1,4 +1,5 @@
 # scala-examples
+![Continuous Integration](https://github.com/tatatakky/scala-examples/actions/workflows/ci.yml/badge.svg)
 
 ## 型クラス
 
