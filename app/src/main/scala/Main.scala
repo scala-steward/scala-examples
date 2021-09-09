@@ -11,6 +11,6 @@ object Main {
   }
 
   def main(args: Array[String]): Unit = {
-    EitherTExampleSample.executeMain()
+    examples.slack.SlackApi.execute()
   }
 }

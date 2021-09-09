@@ -10,6 +10,8 @@ lazy val catsEffectVersion = "2.5.2"
 lazy val scalatestVersion  = "3.2.9"
 // akka
 lazy val akkaVersion = "2.6.15"
+// slack-api-client
+lazy val slackVersion = "1.12.1"
 
 lazy val `examples` = (project in file("examples")).settings(
   name := "examples",
@@ -17,7 +19,9 @@ lazy val `examples` = (project in file("examples")).settings(
   libraryDependencies ++= Seq(
     "org.typelevel" %% "cats-core"   % catsVersion,
     "org.typelevel" %% "cats-effect" % catsEffectVersion,
-    "org.scalatest" %% "scalatest"   % scalatestVersion
+    "org.scalatest" %% "scalatest"   % scalatestVersion,
+
+    "com.slack.api" % "slack-api-client" % slackVersion
   )
 )
 
