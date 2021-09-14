@@ -12,6 +12,8 @@ lazy val scalatestVersion  = "3.2.9"
 lazy val akkaVersion = "2.6.15"
 // slack-api-client
 lazy val slackVersion = "1.12.1"
+// mockito
+lazy val mockitoVersion = "1.10.19"
 
 lazy val `examples` = (project in file("examples")).settings(
   name := "examples",
@@ -21,7 +23,9 @@ lazy val `examples` = (project in file("examples")).settings(
     "org.typelevel" %% "cats-effect" % catsEffectVersion,
     "org.scalatest" %% "scalatest"   % scalatestVersion,
 
-    "com.slack.api" % "slack-api-client" % slackVersion
+    "com.slack.api" % "slack-api-client" % slackVersion,
+
+    "org.mockito" % "mockito-all" % mockitoVersion % Test
   )
 )
 
