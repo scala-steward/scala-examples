@@ -6,7 +6,7 @@ Global / onChangedBuildSource := ReloadOnSourceChanges
 
 // cats
 lazy val catsVersion       = "2.6.1"
-lazy val catsEffectVersion = "2.5.4"
+lazy val catsEffectVersion = "3.2.9"
 lazy val scalatestVersion  = "3.2.9"
 // akka
 lazy val akkaVersion = "2.6.15"
